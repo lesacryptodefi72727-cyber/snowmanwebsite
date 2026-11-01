@@ -1,1 +1,421 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><meta name="theme-color" content="#102b2a"/><meta name="description" content="Snow Research Supply — laboratory research supplies and verified documentation."/><title>Snow Research Supply | Research Materials</title></head><body><div id="app"></div><script type="module" src="/src.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Snowman | Fresh Flowers, Decorations &amp; Artwork — Delivered</title>
+<meta name="description" content="Snowman hand-picks fresh flowers, elegant decorations and original artwork — ordered in a tap and delivered to your door. Order on Telegram." />
+<meta name="theme-color" content="#06121f" />
+
+<meta property="og:title" content="Snowman | Fresh Flowers, Decorations & Artwork" />
+<meta property="og:description" content="Hand-picked flowers, decorations and artwork, delivered. Order on Telegram." />
+<meta property="og:type" content="website" />
+
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2306121f'/%3E%3Cpath d='M16 5v22M6.5 10.5l19 11M25.5 10.5l-19 11M16 5l-3 3M16 5l3 3M16 27l-3-3M16 27l3-3' stroke='%2338bdf8' stroke-width='1.8' fill='none' stroke-linecap='round'/%3E%3C/svg%3E" />
+</head>
+<body>
+
+<!-- ============ ANNOUNCEMENT MARQUEE ============ -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker__track" id="ticker-track">
+    <span>SAME-DAY DELIVERY</span><span class="dot">❄</span>
+    <span>FRESH, HAND-PICKED FLOWERS</span><span class="dot">❄</span>
+    <span>DECOR &amp; ORIGINAL ARTWORK</span><span class="dot">❄</span>
+    <span>GIFT-READY PACKAGING</span><span class="dot">❄</span>
+    <span>ORDER ON TELEGRAM</span><span class="dot">❄</span>
+  </div>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header class="header" id="header">
+  <div class="wrap header__inner">
+    <a class="brand" href="#top" aria-label="Snowman home">
+      <span class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" width="24" height="24"><path d="M16 4v24M6 10l20 12M26 10L6 22M16 4l-3.2 3.2M16 4l3.2 3.2M16 28l-3.2-3.2M16 28l3.2-3.2M6 10l.2 4.4M6 10l4.3-1M26 22l-.2-4.4M26 22l-4.3 1M26 10l-.2 4.4M26 10l-4.3-1M6 22l.2-4.4M6 22l4.3 1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+      <span class="brand__word">Snowman</span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Primary">
+      <a href="#catalog">Shop</a>
+      <a href="#shop">Collections</a>
+      <a href="#process">How it works</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="header__actions">
+      <a class="btn btn--primary btn--sm tg-open header__tg" data-tg="home" href="#" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M21.9 4.3 18.6 20c-.2 1-.9 1.2-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.3-5 9.1-8.2c.4-.4-.1-.6-.6-.2L6.1 13.4l-4.8-1.5c-1-.3-1-1 .2-1.5L20.6 2.9c.9-.3 1.6.2 1.3 1.4Z"/></svg>
+        Chat on Telegram
+      </a>
+      <button class="icon-btn nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<a id="top"></a>
+
+<main>
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero__glow" aria-hidden="true"></div>
+  <div class="wrap hero__inner">
+    <div class="hero__copy">
+      <span class="eyebrow"><span class="pulse"></span> Fresh flowers · Decor · Artwork</span>
+      <h1>Something Beautiful,<br><span class="grad">Delivered to Your Door.</span></h1>
+      <p class="hero__lead">Snowman hand-picks fresh flowers, elegant decorations and original artwork for every occasion — <strong>ordered in a tap and delivered the same day.</strong></p>
+      <div class="hero__cta">
+        <a href="#catalog" class="btn btn--primary">Browse Collection</a>
+        <a href="#" data-tg="home" class="btn btn--ghost tg-open" target="_blank" rel="noopener">Chat on Telegram</a>
+      </div>
+      <div class="hero__stats">
+        <div><strong>Same-day</strong><span>Local delivery</span></div>
+        <div><strong>Hand-tied</strong><span>By our florists</span></div>
+        <div><strong>In a tap</strong><span>Order in seconds</span></div>
+      </div>
+    </div>
+
+    <div class="hero__visual" aria-hidden="true">
+      <div class="vial-hero">
+        <div class="vial-hero__glow"></div>
+        <svg viewBox="0 0 240 300" class="vial-hero__svg">
+          <defs><radialGradient id="bloom" cx="50%" cy="42%" r="62%">
+            <stop offset="0" stop-color="#ffe0ec"/><stop offset=".5" stop-color="#ff7aa8"/><stop offset="1" stop-color="#d8407a"/>
+          </radialGradient></defs>
+          <path d="M120 140 C 118 200, 122 250, 120 296" stroke="#2f8f57" stroke-width="5" fill="none"/>
+          <path d="M120 210 C 86 198, 72 226, 100 238 C 120 232, 120 224, 120 210Z" fill="#2f8f57"/>
+          <path d="M120 240 C 154 228, 168 256, 140 268 C 120 262, 120 254, 120 240Z" fill="#38a566"/>
+          <g fill="url(#bloom)">
+            <ellipse cx="120" cy="60" rx="27" ry="44"/>
+            <ellipse cx="120" cy="60" rx="27" ry="44" transform="rotate(45 120 112)"/>
+            <ellipse cx="120" cy="60" rx="27" ry="44" transform="rotate(90 120 112)"/>
+            <ellipse cx="120" cy="60" rx="27" ry="44" transform="rotate(135 120 112)"/>
+            <ellipse cx="120" cy="60" rx="27" ry="44" transform="rotate(180 120 112)"/>
+            <ellipse cx="120" cy="60" rx="27" ry="44" transform="rotate(225 120 112)"/>
+            <ellipse cx="120" cy="60" rx="27" ry="44" transform="rotate(270 120 112)"/>
+            <ellipse cx="120" cy="60" rx="27" ry="44" transform="rotate(315 120 112)"/>
+          </g>
+          <g fill="#fff" opacity="0.22">
+            <ellipse cx="120" cy="86" rx="12" ry="22"/>
+            <ellipse cx="120" cy="86" rx="12" ry="22" transform="rotate(72 120 112)"/>
+            <ellipse cx="120" cy="86" rx="12" ry="22" transform="rotate(144 120 112)"/>
+            <ellipse cx="120" cy="86" rx="12" ry="22" transform="rotate(216 120 112)"/>
+            <ellipse cx="120" cy="86" rx="12" ry="22" transform="rotate(288 120 112)"/>
+          </g>
+          <circle cx="120" cy="112" r="22" fill="#ffd36e"/>
+          <circle cx="120" cy="112" r="22" fill="#f3a93c" opacity=".45"/>
+        </svg>
+        <div class="vial-hero__chip chip-coa"><span class="tick">❀</span> Fresh today</div>
+        <div class="vial-hero__chip chip-purity">Hand-tied</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap trust-strip">
+    <div><span class="tick">✓</span> Hand-picked fresh</div>
+    <div><span class="tick">✓</span> Same-day local delivery</div>
+    <div><span class="tick">✓</span> Gift-ready packaging</div>
+    <div><span class="tick">✓</span> Order in a tap on Telegram</div>
+  </div>
+</section>
+
+<!-- ============ MARQUEE ============ -->
+<div class="compound-marquee" aria-hidden="true">
+  <div class="compound-marquee__track">
+    <span>ROSES</span><span>TULIPS</span><span>BOUQUETS</span><span>CENTERPIECES</span><span>WEDDINGS</span><span>GIFTS</span><span>ARTWORK</span><span>WREATHS</span><span>ORCHIDS</span><span>LILIES</span><span>DECOR</span><span>EVENTS</span>
+    <span>ROSES</span><span>TULIPS</span><span>BOUQUETS</span><span>CENTERPIECES</span><span>WEDDINGS</span><span>GIFTS</span><span>ARTWORK</span><span>WREATHS</span><span>ORCHIDS</span><span>LILIES</span><span>DECOR</span><span>EVENTS</span>
+  </div>
+</div>
+
+<!-- ============ STATS BAND ============ -->
+<section class="statband">
+  <div class="wrap statband__grid">
+    <div class="statband__item"><strong id="stat-total">—</strong><span>In the collection</span></div>
+    <div class="statband__item"><strong>Same-day</strong><span>Local delivery</span></div>
+    <div class="statband__item"><strong>Hand-tied</strong><span>By our florists</span></div>
+    <div class="statband__item"><strong>Telegram</strong><span>Tap-to-order</span></div>
+  </div>
+</section>
+
+<!-- ============ CATEGORIES ============ -->
+<section class="section" id="shop">
+  <div class="wrap">
+    <span class="kicker">Shop by collection</span>
+    <h2 class="section__title">Browse the collection</h2>
+    <div class="cats">
+      <a class="cat" href="#catalog">
+        <div class="cat__icon">❀</div>
+        <h3>Flowers</h3>
+        <p class="cat__count">Bouquets &amp; arrangements</p>
+        <span class="cat__link">Shop flowers →</span>
+      </a>
+      <a class="cat" href="#catalog">
+        <div class="cat__icon">✦</div>
+        <h3>Decorations</h3>
+        <p class="cat__count">Centerpieces &amp; event decor</p>
+        <span class="cat__link">Shop decor →</span>
+      </a>
+      <a class="cat" href="#catalog">
+        <div class="cat__icon">◈</div>
+        <h3>Artwork</h3>
+        <p class="cat__count">Original &amp; custom pieces</p>
+        <span class="cat__link">Shop artwork →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CATALOG ============ -->
+<section class="section" id="catalog">
+  <div class="wrap">
+    <div class="catalog__head">
+      <div>
+        <span class="kicker">The collection</span>
+        <h2 class="section__title">Fresh picks</h2>
+      </div>
+      <a href="#" data-tg="home" class="btn btn--ghost btn--sm tg-open" target="_blank" rel="noopener">Chat with us on Telegram →</a>
+    </div>
+    <div class="product-grid" id="product-grid"><!-- rendered by app.js --></div>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section class="section section--alt" id="process">
+  <div class="wrap process__inner">
+    <div class="process__copy">
+      <span class="kicker">Simple &amp; quick</span>
+      <h2 class="section__title">How ordering works</h2>
+      <p class="muted">Found something you love? Ordering takes under a minute — no account, no checkout forms. Pick a piece, share your Telegram and drop a map pin, and we'll message you to confirm and arrange delivery.</p>
+      <ol class="steps">
+        <li><span class="steps__n">01 · Pick</span><span class="steps__t">Choose a flower, decor or artwork piece</span></li>
+        <li><span class="steps__n">02 · Share</span><span class="steps__t">Your Telegram @ and a map pin</span></li>
+        <li><span class="steps__n">03 · Confirm</span><span class="steps__t">We message you on Telegram to finalize</span></li>
+        <li><span class="steps__n">04 · Delivered</span><span class="steps__t">Same-day to your door</span></li>
+      </ol>
+      <a href="#catalog" class="btn btn--ghost">Start an order</a>
+    </div>
+
+    <div class="coa-card">
+      <div class="coa-card__head">
+        <span>Your order</span>
+        <span class="badge badge--pass">EASY</span>
+      </div>
+      <div class="coa-card__row"><span>Product</span><strong>You choose</strong></div>
+      <div class="coa-card__row"><span>Your Telegram</span><strong class="pass">@you</strong></div>
+      <div class="coa-card__row"><span>Delivery spot</span><strong class="pass">📍 Map pin</strong></div>
+      <div class="coa-card__row"><span>We reach out</span><strong class="pass">On Telegram</strong></div>
+      <p class="coa-card__note">No payment on the site — we confirm every order personally and arrange delivery with you.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="section" id="about">
+  <div class="wrap about__inner">
+    <div>
+      <span class="kicker">About Snowman</span>
+      <h2 class="section__title">Crafted for every occasion.</h2>
+      <p class="muted">Snowman brings fresh flowers, beautiful decorations and original artwork to homes, events and gifts. Every arrangement is hand-tied by our florists and delivered with care.</p>
+      <p class="muted">Birthdays, weddings, a thank-you, or just because — tell us what you need and we'll make it effortless, from the first tap to your doorstep.</p>
+    </div>
+    <ul class="whylist">
+      <li><span class="tick">✓</span> Fresh, hand-picked blooms</li>
+      <li><span class="tick">✓</span> Custom arrangements &amp; event decor</li>
+      <li><span class="tick">✓</span> Same-day local delivery</li>
+      <li><span class="tick">✓</span> Order in seconds on Telegram</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ FEATURES ============ -->
+<section class="section section--alt" id="standard">
+  <div class="wrap">
+    <span class="kicker">The Snowman promise</span>
+    <h2 class="section__title">Beautiful, effortless, on time</h2>
+    <div class="features">
+      <div class="feature">
+        <div class="feature__icon">🌸</div>
+        <h3>Hand-Picked &amp; Fresh</h3>
+        <p>Flowers selected fresh and arranged by hand, so every piece arrives looking its best.</p>
+      </div>
+      <div class="feature">
+        <div class="feature__icon">🚚</div>
+        <h3>Same-Day Delivery</h3>
+        <p>Order today, delivered today to your chosen spot — just drop a pin on the map.</p>
+      </div>
+      <div class="feature">
+        <div class="feature__icon">💬</div>
+        <h3>Easy Telegram Ordering</h3>
+        <p>No accounts or checkout forms. Share your Telegram and we handle the rest personally.</p>
+      </div>
+      <div class="feature">
+        <div class="feature__icon">🎁</div>
+        <h3>Gift-Ready</h3>
+        <p>Beautifully packaged and ready to gift, with a note if you'd like one included.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OCCASIONS ============ -->
+<section class="section" id="occasions">
+  <div class="wrap">
+    <div class="catalog__head">
+      <div>
+        <span class="kicker">Perfect for</span>
+        <h2 class="section__title">Every occasion</h2>
+      </div>
+      <a href="#catalog" class="btn btn--ghost btn--sm">Browse all</a>
+    </div>
+    <div class="hub">
+      <article class="hub__card">
+        <span class="hub__tag">Celebrate</span>
+        <h3>Weddings &amp; Events</h3>
+        <p>Centerpieces, bouquets and decor to make the day unforgettable.</p>
+        <span class="hub__link">Explore →</span>
+      </article>
+      <article class="hub__card">
+        <span class="hub__tag">Gifting</span>
+        <h3>Birthdays &amp; Gifts</h3>
+        <p>Say it with flowers — hand-tied bouquets and gift sets, delivered.</p>
+        <span class="hub__link">Explore →</span>
+      </article>
+      <article class="hub__card">
+        <span class="hub__tag">Home</span>
+        <h3>Home &amp; Decor</h3>
+        <p>Decorations and arrangements that bring any space to life.</p>
+        <span class="hub__link">Explore →</span>
+      </article>
+      <article class="hub__card">
+        <span class="hub__tag">Bespoke</span>
+        <h3>Artwork &amp; Custom</h3>
+        <p>Original and made-to-order pieces for something truly one-of-a-kind.</p>
+        <span class="hub__link">Explore →</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="cta" id="faq-cta">
+  <div class="cta__glow" aria-hidden="true"></div>
+  <div class="wrap cta__inner">
+    <h2>Ready to send something beautiful?</h2>
+    <p>Browse the collection, pick your piece, and we'll take care of the rest — confirmed on Telegram and delivered to your door.</p>
+    <div class="cta__btns">
+      <a href="#catalog" class="btn btn--primary">Browse Collection</a>
+      <a href="#" data-tg="home" class="btn btn--ghost tg-open" target="_blank" rel="noopener">Chat on Telegram</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NEWSLETTER ============ -->
+<section class="news" id="contact">
+  <div class="wrap news__inner">
+    <div>
+      <h3>Fresh drops &amp; offers</h3>
+      <p class="muted">New arrivals, seasonal collections and special offers. No spam — unsubscribe anytime.</p>
+    </div>
+    <form class="news__form" id="news-form" novalidate>
+      <input type="email" id="news-email" placeholder="you@email.com" aria-label="Email address" required />
+      <button type="submit" class="btn btn--primary">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="wrap footer__grid">
+    <div class="footer__brand">
+      <a class="brand" href="#top">
+        <span class="logo-mark" aria-hidden="true"><svg viewBox="0 0 32 32" width="22" height="22"><path d="M16 4v24M6 10l20 12M26 10L6 22M16 4l-3.2 3.2M16 4l3.2 3.2M16 28l-3.2-3.2M16 28l3.2-3.2" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></span>
+        <span class="brand__word">Snowman</span>
+      </a>
+      <p class="footer__tag">FLOWERS · DECOR · ARTWORK</p>
+      <p class="muted small">Fresh flowers, elegant decorations and original artwork — hand-tied, gift-ready, and delivered the same day. Order in a tap on Telegram.</p>
+    </div>
+    <div class="footer__col">
+      <h4>Shop</h4>
+      <a href="#catalog">All Products</a>
+      <a href="#catalog">Flowers</a>
+      <a href="#catalog">Decorations</a>
+      <a href="#catalog">Artwork</a>
+    </div>
+    <div class="footer__col">
+      <h4>Company</h4>
+      <a href="#about">About Us</a>
+      <a href="#process">How it works</a>
+      <a href="#occasions">Occasions</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="footer__col">
+      <h4>Contact</h4>
+      <a href="#" data-tg="home" class="tg-open" target="_blank" rel="noopener">Order on Telegram</a>
+      <a href="#contact">Newsletter</a>
+      <p class="muted small">Same-day local delivery</p>
+    </div>
+  </div>
+  <div class="wrap footer__legal">
+    <p>© <span id="year">2026</span> Snowman. All rights reserved.</p>
+    <div class="footer__links">
+      <a href="#">Delivery</a><a href="#">Returns</a><a href="#">Privacy</a><a href="#">Terms</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ ORDER MODAL ============ -->
+<div class="modal" id="order-modal" hidden>
+  <div class="modal__backdrop" data-close-order></div>
+  <div class="modal__card" role="dialog" aria-modal="true" aria-labelledby="order-title">
+    <button class="icon-btn modal__x" data-close-order aria-label="Close">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+
+    <!-- step: form -->
+    <div id="order-step-form">
+      <h2 id="order-title">Place your order</h2>
+      <p class="modal__sub">Tell us where you are and how to reach you — we'll message you on Telegram to confirm and arrange same-day delivery.</p>
+
+      <div class="order-item" id="order-item"><!-- product + price --></div>
+
+      <div class="field"><label for="od-user">Your Telegram username</label><input id="od-user" type="text" placeholder="@yourhandle" autocomplete="off" /></div>
+
+      <div class="field">
+        <label>Delivery location — drag the pin to your spot</label>
+        <div id="order-map" class="order-map"></div>
+        <button type="button" class="btn btn--ghost btn--sm map-locate" id="od-locate">📍 Use my current location</button>
+        <p class="map-hint" id="od-maphint">Pin set — you can drag it to fine-tune.</p>
+      </div>
+
+      <div class="field"><label for="od-note">Note (optional)</label><input id="od-note" type="text" placeholder="Delivery time, message on the card, etc." /></div>
+
+      <button class="btn btn--primary btn--block" id="send-order-btn">Send order</button>
+      <p class="modal__fine">No payment is taken here. We confirm every order personally on Telegram.</p>
+    </div>
+
+    <!-- step: done -->
+    <div id="order-step-done" hidden>
+      <div class="done__icon">✓</div>
+      <h2>Order received 🌸</h2>
+      <p class="modal__sub" id="order-done-msg">Thank you! We'll message you on Telegram shortly to confirm and arrange delivery.</p>
+      <button class="btn btn--primary btn--block" data-close-order>Done</button>
+    </div>
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script type="module" src="app.js"></script>
+</body>
+</html>
